@@ -1,10 +1,10 @@
 import pywhatkit
+import pyautogui
 import requests
 import json
 import time
 import datetime
 import schedule
-import pyautogui
 from tkinter import *
 
 win = Tk()
@@ -18,7 +18,7 @@ if targetOption == 1:
     target = str(input("Please enter the group name : "))
 elif targetOption == 2:
     target = str(input("Please enter the target WhatsApp number (+628...) : "))
-    interval = int(input("Please enter the delay duration (in  minutes) : "))
+interval = int(input("Please enter the delay duration (in  minutes) : "))
 
 #A function to send the quote
 def sendQuote():
@@ -31,7 +31,7 @@ def sendQuote():
 
     #sending the quote based on who the target is
     if targetOption == 1:
-        pywhatkit.sendwhatmsg_to_group_instantly(target, quote)
+        pywhatkit.sendwhatmsg_to_group_instantly(target, quote, now.hour, now.minute + 1)
     elif targetOption == 2:
         pywhatkit.sendwhatmsg(target, quote, now.hour, now.minute + 1)
 

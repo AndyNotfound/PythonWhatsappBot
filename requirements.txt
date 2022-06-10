@@ -1,0 +1,4 @@
+PyAutoGUI==0.9.53
+requests==2.22.0
+pywhatkit==5.3
+schedule==1.1.0
