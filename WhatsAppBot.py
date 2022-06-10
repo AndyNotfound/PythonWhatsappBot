@@ -45,4 +45,5 @@ schedule.every(interval).minutes.do(sendQuote)
 
 while True:
     schedule.run_pending()
+    #time.sleep won't work on Group option
     time.sleep(1)
