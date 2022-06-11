@@ -11,6 +11,7 @@ win = Tk()
 # Gets the resolution (width) and (height) of your monitor
 screen_width = win.winfo_screenwidth() 
 screen_height= win.winfo_screenheight()
+win.withdraw()
 
 #User input for who they'll be sending the message to and at what interval
 targetOption = int(input("Where do you want to send this messeges to?\n\n1. Groups\n2. Contact\nChoose on of the option above => "))
